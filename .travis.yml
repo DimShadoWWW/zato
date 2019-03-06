@@ -42,4 +42,4 @@ notifications:
 
 script:
   - source .travis/test_${MODE}.sh
-  - cd code && ./install.sh -p python
+  - cd code && ./install.sh -p ${TEST_SUITE}

@@ -6,7 +6,7 @@
 
 set -ex
 source $TRAVIS_BUILD_DIR/.travis/setup.sh
-run bash -ec "cd /tmp/zato/code && bash -ex ./install.sh -p ${TEST_SUITE}"
+run bash -ec "cd /tmp/zato/code && bash -ex ./install.sh -p ${TEST_SUITE:-python}"
 
 
 #
