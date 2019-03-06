@@ -39,13 +39,13 @@ matrix:
     - osx
   include:
   - python: "2.7"
-    env: TEST_SUITE=python2
+    env: PY_VERSION=python2
   - python: "3.4"
-    env: TEST_SUITE=python3
+    env: PY_VERSION=python3
 
 notifications:
   email: false
 
 script:
   - source .travis/test_${MODE}.sh
-  - cd code && ./install.sh -p ${TEST_SUITE}
+  - cd code && ./install.sh -p ${PY_VERSION}

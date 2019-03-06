@@ -26,7 +26,9 @@ normalize() {
     cut -d';' -f1
 }
 
-cat code/requirements.txt | normalize > /tmp/declared.txt
+cat code/requirements.txt | normalize > /tmp/declared.
+run /bin/bash -c "curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && ${PY_VERSION:-python} get-pip.py"
+
 run pip freeze | normalize > /tmp/installed.txt
 
 echo
